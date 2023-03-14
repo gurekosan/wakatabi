@@ -1,0 +1,715 @@
+@import url(common.css);
+
+/* わかたびメイン写真 */
+.visualmain {
+  position: relative;
+  margin-bottom: 86px;
+}
+
+.visualmain .visual img {
+  width: 100%;
+  object-fit: cover;
+  text-align: center;
+  animation: anime 3s;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.visualmain p:nth-child(2) img {
+  width: 20%;
+  position: absolute;
+  top: 65%;
+  left: 5%;
+  animation: anime 5s;
+}
+
+.visualmain p:nth-child(3) img {
+  width: 27%;
+  position: absolute;
+  top: 5%;
+  right: 10%;
+  animation: anime 6s;
+}
+
+main {
+  background-image: url(../img/haikeini.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* 和歌山には魅力がいっぱい 記事名*/
+main .saisyo {
+  background-color: #fff;
+}
+
+main section h2 {
+  font-size: 35px;
+  text-align: center;
+}
+
+.marker {
+  display: inline;
+  background-image: linear-gradient(transparent 68%, #dee1da 70%);
+  background-repeat: no-repeat;
+  background-size: 0;
+  transition: 1.5s;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.marker:hover {
+  background-size: 100%;
+  width: 100%;
+}
+
+.midasi {
+  margin-bottom: 65px;
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.midasi span {
+  white-space: nowrap;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* 和歌山には魅力がいっぱい 写真リスト */
+/* /* main section ul.annai { */
+/* display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 78px;
+  justify-content: center;
+} */
+
+main section ul.annai {
+  max-width: 990px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.annai {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1.5s;
+}
+
+.annai.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+main section ul.annai li {
+  margin-left: 10px;
+  margin-right: 10px;
+  /* max-width: 300px; */
+}
+
+/* main section ul.annai li {
+  position: relative;
+}
+
+main section ul.annai li img {
+  position: relative;
+  top: 0%;
+  right: 0%;
+} */
+
+/* main section ul.annai li:hover img:nth-child(2) {
+  opacity: 0;
+} */
+.slick-next {
+  right: -45px;
+}
+
+.slick-prev {
+  left: -50px;
+  z-index: 1;
+}
+
+.slick-prev,
+.slick-next {
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;
+  color: #bcd2a4;
+}
+
+.slick-dots {
+  margin-bottom: -10px;
+}
+
+/* .slick-track li img {
+  width: 100%;
+} */
+
+main section p.mottomiru {
+  padding-top: 40px;
+  padding-bottom: 106px;
+  text-align: center;
+}
+
+/* お知らせ全体 */
+main .oshirase {
+  width: 100%;
+  background-color: #dee1da;
+  margin-bottom: 54px;
+  text-align: center;
+  padding-top: 39px;
+  padding-bottom: 43px;
+}
+
+/* フェードイン */
+.oshirseuchigawa {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1.5s;
+}
+
+.oshirseuchigawa.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+main .oshirseuchigawa {
+  background-color: #fff;
+  border-radius: 22px;
+  text-align: center;
+  padding-bottom: 56px;
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* お知らせタイトル */
+main .oshirseuchigawa dt {
+  color: #8e7a0c;
+  font-size: 25px;
+  padding-top: 30px;
+  margin-bottom: 29px;
+  text-decoration: none;
+}
+
+main .oshirase .oshirseuchigawa .a {
+  flex-basis: 144px;
+}
+
+/* お知らせ new */
+main .oshirseuchigawa dd:first-child {
+  color: #8e7a0c;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 8px;
+  line-height: 0.41;
+}
+
+/* お知らせ 日付 */
+main .oshirase .oshirseuchigawa .a dd:nth-child(2) {
+  background-color: rgba(217, 217, 217, 0.43);
+  border-radius: 6px;
+  padding: 12px 6px;
+}
+
+main .oshirase .oshirseuchigawa p {
+  flex-basis: 394px;
+  margin-bottom: 66px;
+}
+
+main .oshirase .oshirseuchigawa aside {
+  margin-bottom: 56px;
+  text-decoration: underline;
+  font-size: 20px;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/* お知らせ 真ん中 */
+main .osirasenaka {
+  border-top: #8e7a0c 3px solid;
+  border-bottom: #8e7a0c 3px solid;
+  max-width: 652px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  display: flex;
+  align-items: center;
+  gap: 33px;
+  margin-bottom: 32px;
+  font-size: 25px;
+  text-align: left;
+}
+
+main .osirasenaka .a {
+  margin-top: -25px;
+}
+
+main section.tour {
+  max-width: 1026px;
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+  font-size: 22px;
+}
+
+main section.tour h2 {
+  margin-bottom: 49px;
+}
+main section.tour h2 span {
+  white-space: nowrap;
+}
+
+main section.tour .tournaka {
+  background-color: #fff;
+  border: #8e7a0c 1px solid;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 35px;
+  padding-bottom: 33px;
+  margin-bottom: 68px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* background-color: blueviolet; */
+}
+
+.pickup li {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1.5s;
+}
+
+.pickup li.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+main section ul.pickup {
+  /* max-width: 914px;
+  margin-left: auto;
+  margin-right: auto; */
+  display: flex;
+  gap: 2.7%;
+  /* flex-wrap: wrap; */
+  /* gap: 25px; */
+  /* background-color: aqua; */
+}
+
+main section.tour .pickup li {
+  flex-basis: 31.5%;
+  /* flex-basis: 285px; */
+  /* background-color: brown; */
+}
+
+main section.tour .pickup li a {
+  display: block;
+  border: #8e7a0c 3px solid;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  /* margin-top: 20px; */
+  text-align: center;
+  position: relative;
+  height: 500px;
+}
+
+main section.tour .pickup li p {
+  line-height: 25px;
+  text-align: left;
+}
+
+main section.tour .pickup li p span {
+  font-size: 17px;
+}
+
+main section.tour .pickup li p:nth-child(1) {
+  text-align: center;
+  margin-bottom: 25px;
+  /* margin-bottom: 20px; */
+}
+
+main section.tour .pickup li p.kuwashiku {
+  text-align: center;
+  position: absolute;
+  bottom: -10px;
+  right: 50%;
+  transform: translate(50%, -77%);
+}
+
+main section.tour .pickup li p.italic {
+  font-style: italic;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 20%;
+  transform: translate(-22%, 65%);
+  /* padding-top: 10px;
+  padding-bottom: 25px; */
+}
+
+main section.tour p:last-child {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main section.tour > p {
+  margin-bottom: 98px;
+}
+
+main section.theme {
+  background-color: #fff;
+  padding-bottom: 28px;
+}
+
+main section.theme .themenaka {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 94px;
+  padding-left: 59px;
+  padding-right: 59px;
+  padding-bottom: 86px;
+  border-bottom: #dee1da 4px solid;
+  border-top: #dee1da 4px solid;
+}
+
+main section.theme ul {
+  display: flex;
+  gap: 20px;
+  /* gap: 1.9%; */
+  flex-wrap: wrap;
+  /* background-color: burlywood; */
+  justify-content: center;
+}
+
+main section.theme .themelist li {
+  /* flex-basis: 18.4%; */
+  flex-basis: 188px;
+}
+
+.themelist li {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1.5s;
+}
+
+.themelist li.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+main section.hajimetenokata {
+  padding-top: 102px;
+  padding-bottom: 108px;
+  line-height: 1.6;
+  /* background-image: url(../img/wakayama.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 10%; */
+}
+
+main section.hajimetenokata h2 {
+  margin-bottom: 86px;
+}
+
+main section.hajimetenokata h2 img {
+  padding-right: 39px;
+  z-index: 0;
+}
+
+main section .wakayama {
+  display: flex;
+  align-items: flex-start;
+}
+
+main section .wakayama > p {
+  margin-top: -100px;
+  margin-left: 0px;
+  max-width: 448px;
+}
+
+main section .wakayama .matome {
+  text-align: center;
+  margin-left: -90px;
+  margin-right: auto;
+  /* background-color: aqua; */
+}
+
+.matome {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 1.5s;
+}
+
+.matome.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+main section .matome p:first-child {
+  text-align: left;
+  font-size: 24px;
+  margin-bottom: 46px;
+  max-width: 724px;
+}
+
+main section .matome p:nth-child(2) {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  main section h2 {
+    font-size: 30px;
+  }
+
+  main .oshirseuchigawa {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  main section ul.pickup {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 6%;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    /* gap: 2.7px; */
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+
+  main section.tour .pickup li {
+    flex-basis: 47%;
+    /* flex-basis: 287px; */
+  }
+  main section.tour .tournaka {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  main section.theme .themelist {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    /* gap: 20px; */
+    gap: 3%;
+    row-gap: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* background-color: burlywood; */
+  }
+
+  main section.theme .themelist li {
+    flex-basis: 188px;
+  }
+  main section.hajimetenokata .matome p {
+    font-size: 20px;
+  }
+  footer section ul,
+  footer section.small {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  header p:nth-child(2) {
+    visibility: hidden;
+  }
+  header p:nth-child(3) {
+    visibility: hidden;
+  }
+
+  .visualmain .visual img {
+    object-fit: cover;
+    object-position: middle;
+    height: 400px;
+  }
+
+  .visualmain p:nth-child(2) img {
+    width: 150px;
+    object-position: left;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    transform: translate(0%, -60%);
+  }
+
+  .visualmain p:nth-child(3) img {
+    width: 250px;
+    position: absolute;
+    transform: translate(50%, -65%);
+    top: 50%;
+    right: 50%;
+    margin-left: 10px;
+  }
+
+  main section ul.pickup {
+    display: block;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  main section.tour .pickup li {
+    max-width: 288px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  main section .wakayama {
+    position: relative;
+    padding-bottom: 40px;
+  }
+
+  main section .wakayama > p {
+    max-width: 448px;
+    padding-top: 20px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  main section .wakayama .matome {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: aqua; */
+  }
+  main section .wakayama .matome p {
+    text-shadow: 7px 7px 5px #fff;
+  }
+
+  main section .matome p:first-child {
+    text-align: left;
+    font-size: 24px;
+    margin-bottom: 46px;
+    max-width: 724px;
+  }
+
+  main section .matome p:nth-child(2) {
+    text-align: center;
+  }
+
+  footer {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  header h1 {
+    padding-right: 50px;
+  }
+
+  main section h2 {
+    font-size: 25px;
+  }
+  main .osirasenaka {
+    display: block;
+  }
+
+  main .oshirase .oshirseuchigawa .a dd:nth-child(2) {
+    width: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  main section ul.pickup {
+    display: block;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  main section.tour .pickup li a {
+    position: relative;
+  }
+  main section.tour .pickup li p {
+    margin-bottom: 30px;
+  }
+
+  main section.tour .pickup li p.kuwashiku {
+    position: unset;
+    transform: translate(0%, 0%);
+  }
+
+  main section.tour .pickup li p.italic {
+    position: unset;
+    transform: translate(0%, 0%);
+    margin-bottom: 10px;
+  }
+
+  main section.tour p:last-child {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+  }
+
+  main section.tour > p {
+    margin-bottom: 98px;
+  }
+
+  main section.tour .tournaka {
+    background-color: #fff;
+    border: #8e7a0c 1px solid;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 35px;
+    padding-bottom: 33px;
+    margin-bottom: 68px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+/* footer {
+    padding-bottom: 23%;
+    padding-right: 10px;
+  }
+
+  footer section.toiawase {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: aqua;
+  }
+
+  footer section.toiawase .pictureichi {
+    flex-basis: 60.7%;
+    background-color: #8e7a0c;
+  }
+
+  footer section.toiawase .pictureni {
+    flex-basis: 39.2%;
+    background-color: blueviolet;
+  }
+
+  footer section.toiawase .pictureichi picture img {
+    width: 100%;
+  }
+
+  footer section.toiawase .pictureni picture img {
+    width: 100%;
+  }
+
+  footer p.top {
+    bottom: 10.5%;
+  }
+} */

@@ -1,0 +1,135 @@
+@import url(common.css);
+
+main .mainnaka {
+  background-image: url(../img/haikei.png);
+  background-size: auto;
+  padding-bottom: 80px;
+}
+
+main h1 {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  visibility: hidden;
+}
+
+main .cyuui {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  font-size: 20px;
+  line-height: 1.3;
+  border: #a5c28e 2px solid;
+  padding: 30px;
+  background-color: #fff;
+}
+
+main p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+article {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f9fffe;
+  padding-bottom: 30px;
+  border: #c1d9ad 2px solid;
+  border-radius: 30px 30px 0 0;
+  padding-bottom: 40px;
+}
+
+article .toiawase {
+  background-color: #c1d9ad;
+  margin-bottom: 30px;
+  font-size: 20px;
+  padding-bottom: 20px;
+  border-radius: 24px 24px 0 0;
+}
+
+article .toiawase p {
+  max-width: 65px;
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  top: 12px;
+  padding-bottom: 25px;
+}
+
+article h2,
+article h3 {
+  text-align: center;
+}
+
+article p:last-child {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+article fieldset legend {
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+
+article fieldset p {
+  padding-bottom: 20px;
+  line-height: 1.5;
+}
+
+article fieldset legend span {
+  background-color: rgb(255, 153, 127);
+  padding: 4px;
+  margin-left: 20px;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+article fieldset .nini span {
+  background-color: rgba(152, 212, 230, 0.699);
+}
+
+main input[type="text"],
+main input[type="email"],
+main input[type="tel"],
+main textarea {
+  width: 100%;
+  padding: 8px;
+  outline: none;
+}
+
+main textarea {
+  height: 12em;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+main .kojinnjouhou p {
+  padding-bottom: 30px;
+  font-size: 14px;
+}
+
+main h3 {
+  padding-bottom: 10px;
+}
+
+main form button {
+  padding: 10px 22px 10px 30px;
+  letter-spacing: 8px;
+  border: 1px solid #666;
+  background-color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #a5c28e;
+}
+
+@media (max-width: 991px) {
+  main .mainnaka {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
