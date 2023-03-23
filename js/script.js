@@ -55,7 +55,7 @@ $(function () {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > position - windowHeight + 200) {
+      if (scroll > position - windowHeight + 80) {
         $(this).addClass("active");
       }
     });
@@ -112,4 +112,35 @@ $(function () {
       }
     });
   });
+});
+
+$(function () {
+  $(".themelist li img").hover(
+    function () {
+      $(this).stop().animate(
+        {
+          width: "190px",
+          height: "190px",
+          marginTop: "-22px",
+        },
+        "fast"
+      );
+    },
+    function () {
+      $(this).stop().animate(
+        {
+          width: "188px",
+          height: "188px",
+          marginTop: "0px",
+        },
+        "fast"
+      );
+    }
+  );
+});
+
+//logoの表示
+$(window).on("load", function () {
+  $("#mainlogo").delay(1800).fadeOut("slow"); //ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+  $("#main_logo").delay(1400).fadeOut("slow"); //ロゴを1.2秒（1200ms）待機してからフェードアウト
 });
