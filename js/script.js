@@ -3,6 +3,7 @@ $(".saisyo .annai").slick({
   autoplay: true,
   autoplaySpeed: 3000,
   dots: true,
+  arrows: false,
   responsive: [
     {
       breakpoint: 991,
@@ -55,7 +56,7 @@ $(function () {
       var position = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > position - windowHeight + 80) {
+      if (scroll > position - windowHeight + 0) {
         $(this).addClass("active");
       }
     });

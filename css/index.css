@@ -1,16 +1,65 @@
 @import url(common.css);
 
-/* わかたびメイン写真 */
+.hover {
+  position: relative;
+}
+.hover .hover-img {
+  margin: 0;
+  padding: 0;
+}
+.hover-img img {
+  width: 100%;
+  height: 100%;
+}
+.hover .hover-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(29, 27, 27, 0.65);
+  border-radius: 10px;
+  /*透明にして表示させない*/
+  opacity: 0;
+  /*ホバーの動き方*/
+  transition: 0.5s ease-in-out;
+}
+.hover .hover-text {
+  font-size: 22px;
+  padding: 92px 100px;
+}
+
+/*ホバーエフェクト*/
+.hover:hover .hover-text {
+  /*不透明にして表示*/
+  opacity: 1;
+}
+
+/* わかたび */
+main {
+  background-image: url(../img/dot-grid.webp);
+  background-size: 1000px 1000px; /* image size */
+  animation: bg 30s infinite linear;
+}
+@keyframes bg {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 360px -360px;
+  }
+}
+
 .visualmain {
   position: relative;
-  margin-bottom: 86px;
 }
 
 .visualmain .visual img {
   width: 100%;
   object-fit: cover;
   text-align: center;
-  animation: anime 3s;
+  animation: anime 10s;
 }
 
 @keyframes anime {
@@ -27,7 +76,7 @@
   position: absolute;
   top: 65%;
   left: 5%;
-  animation: anime 5s;
+  animation: anime 15s;
 }
 
 .visualmain p:nth-child(3) img {
@@ -35,18 +84,34 @@
   position: absolute;
   top: 5%;
   right: 10%;
-  animation: anime 6s;
+  animation: anime 15s;
 }
 
-main {
+/* main {
   background-image: url(../img/haikeini.png);
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 /* 和歌山には魅力がいっぱい 記事名*/
+main .saisyonosaisyo {
+  background-image: url(../img/tiny-squares.webp);
+  animation: haikei 10s infinite linear;
+}
+@keyframes haikei {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px -100px;
+  }
+}
+
 main .saisyo {
-  background-color: #fff;
+  background-color: #ffffff;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 main section h2 {
@@ -73,6 +138,7 @@ main section h2 {
   max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 86px;
 }
 
 .midasi span {
@@ -144,7 +210,7 @@ main section ul.annai li img {
 .slick-prev:before,
 .slick-next:before {
   font-size: 40px;
-  color: #bcd2a4;
+  color: #ffffff;
 }
 
 .slick-dots {
@@ -279,14 +345,13 @@ main section.tour .tournaka {
   padding-left: 55px;
   padding-right: 55px;
   padding-top: 35px;
-  padding-bottom: 33px;
+  padding-bottom: 110px;
   margin-bottom: 68px;
   padding-left: 20px;
   padding-right: 20px;
-  /* background-color: blueviolet; */
 }
 
-.pickup li {
+/* .pickup li {
   opacity: 0;
   transform: translate(0, 100px);
   transition: all 1.5s;
@@ -295,6 +360,51 @@ main section.tour .tournaka {
 .pickup li.active {
   opacity: 1;
   transform: translate(0, 0);
+} */
+
+.card {
+  /* width: 300px; 任意の横幅を指定 */
+  position: relative;
+  cursor: pointer;
+}
+
+/* 擬似要素とpadding-topでカードの高さを指定 */
+.card::before {
+  content: "";
+  display: block;
+  padding-top: 142.5%;
+}
+
+/* カード内の画像 */
+
+/* カード裏面・表面の共通スタイル */
+.card .back,
+.card .front {
+  transition: all 3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+/* カード表面のスタイル */
+.card .front {
+  transform: rotateY(-180deg);
+}
+.front a {
+  background-color: #d9d9d9;
+}
+
+/* ホバー時のカード裏面 */
+.card:hover .back {
+  transform: rotateY(180deg);
+}
+
+/* ホバー時のカード表面 */
+.card:hover .front {
+  transform: rotateY(0);
 }
 
 main section ul.pickup {
@@ -405,8 +515,8 @@ main section.theme .themelist li {
 
 .themelist li {
   opacity: 0;
-  transform: translate(0, 100px);
-  transition: all 1.5s;
+  transform: translate(0, 50px);
+  transition: all 1s;
 }
 
 .themelist li.active {
@@ -430,7 +540,7 @@ main section.hajimetenokata h2 {
 
 main section.hajimetenokata h2 img {
   padding-right: 39px;
-  z-index: 0;
+  z-index: 1;
 }
 
 main section .wakayama {
@@ -449,6 +559,10 @@ main section .wakayama .matome {
   margin-left: -90px;
   margin-right: auto;
   /* background-color: aqua; */
+}
+
+main section .wakayama p:first-child {
+  z-index: 0;
 }
 
 .matome {
@@ -492,7 +606,7 @@ main section .matome p:nth-child(2) {
     margin-left: auto;
     margin-right: auto;
     gap: 6%;
-    row-gap: 25px;
+    row-gap: 115px;
     flex-wrap: wrap;
     /* gap: 2.7px; */
     padding-left: 35px;
@@ -573,8 +687,9 @@ main section .matome p:nth-child(2) {
     max-width: 288px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 20px;
+    margin-bottom: 110px;
   }
+
   main section .wakayama {
     position: relative;
     padding-bottom: 40px;

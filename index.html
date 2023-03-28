@@ -23,22 +23,22 @@
         <p><a href="#hajimete"><img src="img/Group 15.png"></a></p>
         <p><a href="#"><img src="img/Group 16.png"></a></p>
     </header>
+    <nav>
+        <ul>
+            <li><a href="#">ログイン</a></li>
+            <li><a href="#hajimete">はじめての方</a></li>
+        </ul>
+    </nav>
     <div class="body">
         <!-- メインビジュアル -->
         <div class="visualmain">
             <p class="visual"><img src="img/ichi.png" alt="わかたび"></p>
-            <p><img src="img/iitokoro.png"></p>
+            <p><img src="img/iitokoro.png" alt="わかやまのいいところ"></p>
             <p><img src="img/wakatabilogo.png"></p>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#">ログイン</a></li>
-                <li><a href="#hajimete">はじめての方</a></li>
-            </ul>
-        </nav>
         <button class="hmenu"><span></span></button>
         <main>
-            <section>
+            <section class="saisyonosaisyo">
                 <div class="saisyo">
                     <!-- <section class="container"> -->
 
@@ -47,27 +47,55 @@
                     </h2>
                     <ul class="annai">
                         <li>
-                            <a href="#"><img src="img/tomogasima.png" alt="tomogasima"></a>
+                            <div class="hover">
+                                <div class="hover-img">
+                                    <a href="#"><img src="img/tomogasima.png" alt="tomogasima"></a>
+                                </div>
+                                <div class="hover-text">詳しく見る</div>
+                            </div>
                         </li>
                         <li>
-                            <a href="#"><img src="img/kusimoto.png" alt="kushimotocyou"></a>
+                            <div class="hover">
+                                <div class="hover-img">
+                                    <a href="#"><img src="img/kusimoto.png" alt="kushimotocyou"></a>
+                                </div>
+                                <div class="hover-text">詳しく見る</div>
+                            </div>
                         </li>
                         <li>
-                            <a href="#"><img src="img/sirasakikouen.png" alt="sirasakikouen"></a>
+                            <div class="hover">
+                                <div class="hover-img">
+                                    <a href="#"><img src="img/sirasakikouen.png" alt="sirasakikouen"></a>
+                                </div>
+                                <div class="hover-text">詳しく見る</div>
+                            </div>
                         </li>
                         <li>
-                            <a href="#"><img src="img/okunoin.png" alt="kouyasanokunoin"></a>
+                            <div class="hover">
+                                <div class="hover-img">
+                                    <a href="#"><img src="img/okunoin.png" alt="kouyasanokunoin"></a>
+                                </div>
+                                <div class="hover-text">詳しく見る</div>
+                            </div>
                         </li>
                         <li>
-                            <a href="#"><img src="img/tennjinnzaki.png" alt="tenjinzaki"></a>
+                            <div class="hover">
+                                <div class="hover-img">
+                                    <a href="#"><img src="img/tennjinnzaki.png" alt="tenjinzaki"></a>
+                                </div>
+                                <div class="hover-text">詳しく見る</div>
+                            </div>
                         </li>
                         <li>
-                            <a href="#"><img src="img/gokurakubashi.png" alt="gokurakubashi"></a>
+                            <div class="hover">
+                                <div class="hover-img">
+                                    <a href="#"><img src="img/gokurakubashi.png" alt="gokurakubashi"></a>
+                                </div>
+                                <div class="hover-text">詳しく見る</div>
+                            </div>
                         </li>
                     </ul>
                     <p class="mottomiru"><a href="#"><img src="img/mottomiru.png" alt="もっと見る"></a></p>
-
-
                 </div>
             </section>
             <dl>
@@ -95,32 +123,64 @@
                         </div>
                     </h2>
                     <ul class="pickup">
-
-                        <li>
-                            <a href="#">
-                                <p><img src="img/sizennihureru.png" alt="sizennihureru"></p>
-                                <p>【熊野古道探索ツアー】<br>過去への思いを馳せながら歩く【田辺市/4泊5日】</p>
-                                <p class="italic">68,000<span>円</span>～90,000<span>円</span></p>
-                                <p class="kuwashiku
+                        <li class="card">
+                            <div class="back">
+                                <a href="#">
+                                    <p><img src="img/sizennihureru.png" alt="sizennihureru"></p>
+                                    <p>【熊野古道探索ツアー】<br>過去への思いを馳せながら歩く【田辺市/4泊5日】</p>
+                                    <p class="italic">68,000<span>円</span>～90,000<span>円</span></p>
+                                    <p class="kuwashiku
                             "><img src="img/kuwasikumiru.png" alt="kuwashikumiru"></p>
-                            </a>
+                                </a>
+                            </div>
+
+                            <div class="front">
+                                <a href="#">
+                                    <p><img src="img/happa.png" alt="sizennihureru"></p>
+                                    <p>【熊野古道探索ツアー】<br>過去への思いを馳せながら歩く【田辺市/4泊5日】</p>
+                                    <p class="italic">68,000<span>円</span>～90,000<span>円</span></p>
+                                    <p class="kuwashiku
+                                                                "><img src="img/kuwasikumiru.png" alt="kuwashikumiru"></p>
+                                </a>
                         </li>
-                        <li>
-                            <a href="#">
-                                <p><img src="img/gohoubi.png" alt="gohoubitabi"></p>
-                                <p>【ゆったり白浜温泉】<br>美人の湯でデトックス♪【白浜町/2泊3日】</p>
-                                <p class="italic">20,000<span>円</span>～25,000<span>円</span></p>
-                                <p class="kuwashiku"><img src="img/kuwasikumiru.png" alt="kuwashikumiru"></p>
-                            </a>
+
+                        <li class="card">
+                            <div class="back">
+                                <a href="#">
+                                    <p><img src="img/gohoubi.png" alt="gohoubitabi"></p>
+                                    <p>【ゆったり白浜温泉】<br>美人の湯でデトックス♪【白浜町/2泊3日】</p>
+                                    <p class="italic">20,000<span>円</span>～25,000<span>円</span></p>
+                                    <p class="kuwashiku"><img src="img/kuwasikumiru.png" alt="kuwashikumiru"></p>
+                                </a>
+                            </div>
+                            <div class="front">
+                                <a href="#">
+                                    <p><img src="img/onsenn.png" alt="gohoubitabi"></p>
+                                    <p>【ゆったり白浜温泉】<br>美人の湯でデトックス♪【白浜町/2泊3日】</p>
+                                    <p class="italic">20,000<span>円</span>～25,000<span>円</span></p>
+                                    <p class="kuwashiku"><img src="img/kuwasikumiru.png" alt="kuwashikumiru"></p>
+                                </a>
+                            </div>
                         </li>
-                        <li>
-                            <a href="#">
-                                <p><img src="img/zeitaku.png" alt="zeitakunasyokuji">
-                                </p>
-                                <p>【新鮮な海の幸を堪能】<br>鮨と地酒を楽しむ【太地町/1泊2日】</p>
-                                <p class="italic">32,000<span>円</span>～43,000<span>円</span></p>
-                                <p class="kuwashiku"><img src="img/kuwasikumiru.png"></p>
-                            </a>
+                        <li class="card">
+                            <div class="back">
+                                <a href="#">
+                                    <p><img src="img/zeitaku.png" alt="zeitakunasyokuji">
+                                    </p>
+                                    <p>【新鮮な海の幸を堪能】<br>鮨と地酒を楽しむ【太地町/1泊2日】</p>
+                                    <p class="italic">32,000<span>円</span>～43,000<span>円</span></p>
+                                    <p class="kuwashiku"><img src="img/kuwasikumiru.png"></p>
+                                </a>
+                            </div>
+                            <div class="front">
+                                <a href="#">
+                                    <p><img src="img/sushi.png" alt="zeitakunasyokuji">
+                                    </p>
+                                    <p>【新鮮な海の幸を堪能】<br>鮨と地酒を楽しむ【太地町/1泊2日】</p>
+                                    <p class="italic">32,000<span>円</span>～43,000<span>円</span></p>
+                                    <p class="kuwashiku"><img src="img/kuwasikumiru.png"></p>
+                                </a>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -184,9 +244,10 @@
                 </ul>
             </section>
             <section class="small">
-                <p><small>画像提供 公益社団法人和歌山県観光連盟
+                <p><small>画像提供 公益社団法人和歌山県観光連盟,背景使用 Toptal様
                     </small><br><small>(c)Wakatabi All rights reserved.</small></p>
             </section>
+
             <section class="toiawase">
                 <p class="pictureichi"><a href="#">
                         <picture>

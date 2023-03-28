@@ -1,7 +1,7 @@
 @import url(common.css);
 
 main .mainnaka {
-  background-image: url(../img/haikei.png);
+  background-image: url(../img/dot-grid.webp);
   background-size: auto;
   padding-bottom: 80px;
 }
