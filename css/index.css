@@ -1,48 +1,24 @@
 @import url(common.css);
 
-.hover {
+.wave {
   position: relative;
 }
-.hover .hover-img {
-  margin: 0;
-  padding: 0;
-}
-.hover-img img {
-  width: 100%;
-  height: 100%;
-}
-.hover .hover-text {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: #fff;
-  background-color: rgba(29, 27, 27, 0.65);
-  border-radius: 10px;
-  /*透明にして表示させない*/
-  opacity: 0;
-  /*ホバーの動き方*/
-  transition: 0.5s ease-in-out;
-}
-.hover .hover-text {
-  font-size: 22px;
-  padding: 92px 100px;
-}
 
-/*ホバーエフェクト*/
-.hover:hover .hover-text {
-  /*不透明にして表示*/
-  opacity: 1;
+.wave canvas {
+  position: absolute;
+  bottom: -113px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
 }
 
 /* わかたび */
 main {
   background-image: url(../img/dot-grid.webp);
   background-size: 1000px 1000px; /* image size */
-  animation: bg 30s infinite linear;
+  animation: wakatabi 30s infinite linear;
 }
-@keyframes bg {
+@keyframes wakatabi {
   0% {
     background-position: 0 0;
   }
@@ -59,10 +35,11 @@ main {
   width: 100%;
   object-fit: cover;
   text-align: center;
-  animation: anime 10s;
+  animation: visual 12s;
+  transition-delay: 5s;
 }
 
-@keyframes anime {
+@keyframes visual {
   0% {
     opacity: 0;
   }
@@ -76,7 +53,19 @@ main {
   position: absolute;
   top: 65%;
   left: 5%;
-  animation: anime 15s;
+  animation: wakayamaiitokoro 6s;
+  z-index: 3;
+}
+
+@keyframes wakayamaiitokoro {
+  0% {
+    opacity: 0;
+    transform: translateX(-800px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .visualmain p:nth-child(3) img {
@@ -84,7 +73,33 @@ main {
   position: absolute;
   top: 5%;
   right: 10%;
-  animation: anime 15s;
+  animation: visuallogo 7s ease-in-out 2s alternate;
+  display: inline-block;
+  transition: 4s ease-in-out;
+  z-index: 3;
+  /* width: 400px;
+  height: 400px; */
+}
+
+@keyframes visuallogo {
+  0% {
+    transform: translate(0, 0) rotate(-7deg);
+  }
+  25% {
+    transform: translate(0, -7) rotate(0deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(7deg);
+  }
+  75% {
+    transform: translate(0, -7) rotate(0deg);
+  }
+  88% {
+    transform: translate(0, 0) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
 }
 
 /* main {
@@ -96,14 +111,14 @@ main {
 /* 和歌山には魅力がいっぱい 記事名*/
 main .saisyonosaisyo {
   background-image: url(../img/tiny-squares.webp);
-  animation: haikei 10s infinite linear;
+  animation: haikei 30s infinite normal;
 }
 @keyframes haikei {
   0% {
     background-position: 0 0;
   }
   100% {
-    background-position: 100px -100px;
+    background-position: 100px 100px;
   }
 }
 
@@ -117,6 +132,10 @@ main .saisyo {
 main section h2 {
   font-size: 35px;
   text-align: center;
+}
+
+.saisyo .midasi {
+  padding-top: 96px;
 }
 
 .marker {
@@ -156,6 +175,42 @@ main section h2 {
   justify-content: center;
 } */
 
+.hover {
+  position: relative;
+}
+.hover .hover-img {
+  margin: 0;
+  padding: 0;
+}
+.hover-img img {
+  width: 100%;
+  height: 100%;
+}
+.hover .hover-text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background-color: rgba(29, 27, 27, 0.65);
+  border-radius: 10px;
+  /*透明にして表示させない*/
+  opacity: 0;
+  /*ホバーの動き方*/
+  transition: 0.5s ease-in-out;
+}
+.hover .hover-text {
+  font-size: 22px;
+  padding: 92px 100px;
+}
+
+/*ホバーエフェクト*/
+.hover:hover .hover-text {
+  /*不透明にして表示*/
+  opacity: 1;
+}
+
 main section ul.annai {
   max-width: 990px;
   margin-left: auto;
@@ -165,7 +220,7 @@ main section ul.annai {
 .annai {
   opacity: 0;
   transform: translate(0, 100px);
-  transition: all 1.5s;
+  transition: all 2s;
 }
 
 .annai.active {
@@ -241,7 +296,7 @@ main .oshirase {
 .oshirseuchigawa {
   opacity: 0;
   transform: translate(0, 100px);
-  transition: all 1.5s;
+  transition: all 2.5s;
 }
 
 .oshirseuchigawa.active {
@@ -344,23 +399,12 @@ main section.tour .tournaka {
   border: #8e7a0c 1px solid;
   padding-left: 55px;
   padding-right: 55px;
-  padding-top: 35px;
+  padding-top: 0px;
   padding-bottom: 110px;
   margin-bottom: 68px;
   padding-left: 20px;
   padding-right: 20px;
 }
-
-/* .pickup li {
-  opacity: 0;
-  transform: translate(0, 100px);
-  transition: all 1.5s;
-}
-
-.pickup li.active {
-  opacity: 1;
-  transform: translate(0, 0);
-} */
 
 .card {
   /* width: 300px; 任意の横幅を指定 */
@@ -380,7 +424,7 @@ main section.tour .tournaka {
 /* カード裏面・表面の共通スタイル */
 .card .back,
 .card .front {
-  transition: all 3s;
+  transition: all 2.9s;
   position: absolute;
   left: 0;
   top: 0;
@@ -491,7 +535,7 @@ main section.theme .themenaka {
   margin-left: auto;
   margin-right: auto;
 
-  padding-top: 94px;
+  padding-top: 0px;
   padding-left: 59px;
   padding-right: 59px;
   padding-bottom: 86px;
@@ -516,7 +560,7 @@ main section.theme .themelist li {
 .themelist li {
   opacity: 0;
   transform: translate(0, 50px);
-  transition: all 1s;
+  transition: all 2s;
 }
 
 .themelist li.active {
@@ -568,7 +612,7 @@ main section .wakayama p:first-child {
 .matome {
   opacity: 0;
   transform: translate(0, 100px);
-  transition: all 1.5s;
+  transition: all 2s;
 }
 
 .matome.active {
@@ -594,6 +638,11 @@ main section .matome p:nth-child(2) {
   }
   main section h2 {
     font-size: 30px;
+  }
+
+  .hover .hover-text {
+    padding-left: 33%;
+    padding-top: 29%;
   }
 
   main .oshirseuchigawa {
@@ -676,6 +725,13 @@ main section .matome p:nth-child(2) {
     top: 50%;
     right: 50%;
     margin-left: 10px;
+    animation: visuallogo none;
+  }
+
+  .hover .hover-text {
+    font-size: 1.3em;
+    padding-left: 34%;
+    padding-top: 29%;
   }
 
   main section ul.pickup {
@@ -775,7 +831,7 @@ main section .matome p:nth-child(2) {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
+    margin-bottom: 10p;
   }
 
   main section.tour > p {

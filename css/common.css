@@ -36,9 +36,32 @@ footer section a:hover {
   opacity: 0.7;
 }
 
-footer section.toiawase a:hover img {
-  /* border: rgb(190, 100, 100) 3px solid; */
+footer section.toiawase a:hover {
   opacity: 1;
+}
+
+.toiawase .pictureichi {
+  width: 126px;
+  height: 112px;
+  overflow: hidden;
+}
+
+.toiawase .pictureni {
+  width: 126px;
+  height: 86px;
+  overflow: hidden;
+}
+
+.toiawase .pictureichi picture img,
+.pictureni picture img {
+  transition: 1s all;
+}
+
+.toiawase .pictureichi picture img:hover,
+.pictureni picture img:hover {
+  transform: scale(1.2, 1.2);
+  background-color: #a9be97;
+  transition: 1s all;
 }
 
 /* ヘッダー */
@@ -248,20 +271,42 @@ footer p.top {
     flex-direction: row-reverse;
   }
 
+  .toiawase .pictureichi {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .toiawase .pictureni {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
   footer section.toiawase .pictureichi {
     flex-basis: 60.7%;
+    /* height: 85px; */
+    margin-bottom: 0;
   }
 
   footer section.toiawase .pictureni {
     flex-basis: 39.2%;
+    /* height: 85px; */
   }
 
   footer section.toiawase .pictureichi picture img {
     width: 100%;
+    /* height: 85px; */
   }
 
   footer section.toiawase .pictureni picture img {
     width: 100%;
+    /* height: 85px; */
+  }
+
+  .toiawase .pictureichi picture img:hover,
+  .pictureni picture img:hover {
+    transform: scale(1.1, 1.1);
   }
 
   footer p.top {
@@ -278,9 +323,7 @@ footer p.top {
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: url(../img/more-leaves.png);
-  text-align: center;
-  color: #fff;
+  background: url(../img/white-waves.webp);
 }
 
 /* Loading画像中央配置　*/
@@ -299,13 +342,13 @@ footer p.top {
 /* fadeUpをするアイコンの動き */
 
 .fadeUp {
-  animation-name: fadeUpAnime;
-  animation-duration: 1.5s;
+  animation-name: dounyuu;
+  animation-duration: 2s;
   animation-fill-mode: forwards;
   opacity: 0;
 }
 
-@keyframes fadeUpAnime {
+@keyframes dounyuu {
   from {
     opacity: 0;
     transform: translateY(100px);

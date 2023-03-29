@@ -13,6 +13,7 @@
     <script src="js/jquery-3.6.3.min.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div id="mainlogo">
         <div id="main_logo">
             <img src="img/wakatabilogo.png" alt="" class="fadeUp">
@@ -31,10 +32,13 @@
     </nav>
     <div class="body">
         <!-- メインビジュアル -->
-        <div class="visualmain">
-            <p class="visual"><img src="img/ichi.png" alt="わかたび"></p>
-            <p><img src="img/iitokoro.png" alt="わかやまのいいところ"></p>
-            <p><img src="img/wakatabilogo.png"></p>
+        <div class="wave">
+            <div class="visualmain">
+                <p class="visual"><img src="img/ichi.png" alt="わかたび"></p>
+                <p><img src="img/iitokoro.png" alt="わかやまのいいところ"></p>
+                <p><img src="img/wakatabilogo.png"></p>
+            </div>
+            <canvas id="waveCanvas"></canvas>
         </div>
         <button class="hmenu"><span></span></button>
         <main>
@@ -244,7 +248,8 @@
                 </ul>
             </section>
             <section class="small">
-                <p><small>画像提供 公益社団法人和歌山県観光連盟,背景使用 Toptal様
+                <p><small>画像提供 公益社団法人和歌山県観光連盟
+                        <!-- 背景使用 Toptal様 -->
                     </small><br><small>(c)Wakatabi All rights reserved.</small></p>
             </section>
 
