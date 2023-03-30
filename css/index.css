@@ -102,12 +102,6 @@ main {
   }
 }
 
-/* main {
-  background-image: url(../img/haikeini.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-} */
-
 /* 和歌山には魅力がいっぱい 記事名*/
 main .saisyonosaisyo {
   background-image: url(../img/tiny-squares.webp);
@@ -166,15 +160,6 @@ main section h2 {
   text-align: center;
 }
 
-/* 和歌山には魅力がいっぱい 写真リスト */
-/* /* main section ul.annai { */
-/* display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-bottom: 78px;
-  justify-content: center;
-} */
-
 .hover {
   position: relative;
 }
@@ -195,12 +180,8 @@ main section h2 {
   color: #fff;
   background-color: rgba(29, 27, 27, 0.65);
   border-radius: 10px;
-  /*透明にして表示させない*/
   opacity: 0;
-  /*ホバーの動き方*/
   transition: 0.5s ease-in-out;
-}
-.hover .hover-text {
   font-size: 22px;
   padding: 92px 100px;
 }
@@ -234,19 +215,6 @@ main section ul.annai li {
   /* max-width: 300px; */
 }
 
-/* main section ul.annai li {
-  position: relative;
-}
-
-main section ul.annai li img {
-  position: relative;
-  top: 0%;
-  right: 0%;
-} */
-
-/* main section ul.annai li:hover img:nth-child(2) {
-  opacity: 0;
-} */
 .slick-next {
   right: -45px;
 }
@@ -271,10 +239,6 @@ main section ul.annai li img {
 .slick-dots {
   margin-bottom: -10px;
 }
-
-/* .slick-track li img {
-  width: 100%;
-} */
 
 main section p.mottomiru {
   padding-top: 40px;
@@ -452,20 +416,12 @@ main section.tour .tournaka {
 }
 
 main section ul.pickup {
-  /* max-width: 914px;
-  margin-left: auto;
-  margin-right: auto; */
   display: flex;
   gap: 2.7%;
-  /* flex-wrap: wrap; */
-  /* gap: 25px; */
-  /* background-color: aqua; */
 }
 
 main section.tour .pickup li {
   flex-basis: 31.5%;
-  /* flex-basis: 285px; */
-  /* background-color: brown; */
 }
 
 main section.tour .pickup li a {
@@ -475,7 +431,6 @@ main section.tour .pickup li a {
   padding-left: 20px;
   padding-right: 20px;
   border-radius: 10px;
-  /* margin-top: 20px; */
   text-align: center;
   position: relative;
   height: 500px;
@@ -493,7 +448,6 @@ main section.tour .pickup li p span {
 main section.tour .pickup li p:nth-child(1) {
   text-align: center;
   margin-bottom: 25px;
-  /* margin-bottom: 20px; */
 }
 
 main section.tour .pickup li p.kuwashiku {
@@ -511,8 +465,6 @@ main section.tour .pickup li p.italic {
   right: 0;
   bottom: 20%;
   transform: translate(-22%, 65%);
-  /* padding-top: 10px;
-  padding-bottom: 25px; */
 }
 
 main section.tour p:last-child {
@@ -572,10 +524,6 @@ main section.hajimetenokata {
   padding-top: 102px;
   padding-bottom: 108px;
   line-height: 1.6;
-  /* background-image: url(../img/wakayama.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: 10%; */
 }
 
 main section.hajimetenokata h2 {
@@ -602,7 +550,6 @@ main section .wakayama .matome {
   text-align: center;
   margin-left: -90px;
   margin-right: auto;
-  /* background-color: aqua; */
 }
 
 main section .wakayama p:first-child {
@@ -785,6 +732,10 @@ main section .matome p:nth-child(2) {
 }
 
 @media (max-width: 575px) {
+  .visualmain p:nth-child(2) img {
+    animation: none;
+  }
+
   header h1 {
     padding-right: 50px;
   }

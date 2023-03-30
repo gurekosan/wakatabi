@@ -146,6 +146,7 @@ $(window).on("load", function () {
   $("#main_logo").delay(1400).fadeOut("slow"); //ロゴを1.2秒（1200ms）待機してからフェードアウト
 });
 
+// 波線
 var unit = 100,
   canvasList, // キャンバスの配列
   info = {}, // 全キャンバス共通の描画情報
