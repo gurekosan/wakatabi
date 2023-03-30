@@ -44,17 +44,20 @@ footer section.toiawase a:hover {
   width: 126px;
   height: 112px;
   overflow: hidden;
+  z-index: 10;
 }
 
 .toiawase .pictureni {
   width: 126px;
   height: 86px;
   overflow: hidden;
+  z-index: 10;
 }
 
 .toiawase .pictureichi picture img,
 .pictureni picture img {
   transition: 1s all;
+  z-index: 10;
 }
 
 .toiawase .pictureichi picture img:hover,
@@ -188,6 +191,7 @@ footer section.toiawase {
   position: fixed;
   right: 0%;
   bottom: 0%;
+  z-index: 10;
 }
 
 footer p.top {
@@ -195,6 +199,7 @@ footer p.top {
   right: 0px;
   bottom: 201px;
   display: none;
+  z-index: 10;
 }
 
 @media (max-width: 991px) {
